@@ -1,2 +1,2 @@
 # gpboilerplate theme
-Bootstrap 5 WordPress starter theme, with sass, vanilla JS and gulp.
+Bootstrap 5 WordPress starter theme with SASS, vanilla JS and gulp.
