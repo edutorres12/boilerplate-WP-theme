@@ -1,0 +1,52 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+html
+	scroll-behavior: smooth
+	overflow-x: hidden
+	width: 100vw
+
+body
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+	font-family: $helvetica
+	font-size: 18px
+	font-weight: 400
+	width: 100%
+	@include media-breakpoint-down(sm)
+		font-size: 15px
+	section
+		position: relative
+
+.wpcf7	form.invalid	.wpcf7-response-output, .wpcf7 form.unaccepted	.wpcf7-response-output
+	background-color: #ffb900
+	color: white
+	width: 100%
+
+.wpcf7 form.failed .wpcf7-response-output, .wpcf7 form.aborted .wpcf7-response-output
+	background-color: #dc3232
+	color: white
+	width: 100%
+
+.wpcf7 form.valid .wpcf7-response-output, .wpcf7 form.accepted .wpcf7-response-output
+	background-color: green
+	color: white
+	width: 100%
+
+
+.wpcf7-not-valid-tip
+    color: #dc3232
+    font-size: .7em
+    font-weight: normal
+    display: block
+
+// Slick slider dentro de bootstrap tabs
+.tab-content > .tab-pane, .pill-content > .pill-pane
+    display: block
+    height: 0
+    overflow: hidden
+
+.tab-content > .active, .pill-content > .active
+    height: auto

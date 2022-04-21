@@ -1,0 +1,44 @@
+//NAVIGATION HEADER 1
+.navbar-light
+  @include media-breakpoint-down(md)
+  .current-menu-item
+    a
+      color: black!important
+
+  .navbar-toggler[aria-expanded='true'] span
+    border-color: transparent
+  .navbar-toggler
+    border: none
+    float: right
+    padding: 1px 3px 4px
+    &:active, &:focus
+      outline: none
+    &[aria-expanded="true"]
+      .navbar-toggler-icon
+        &:after
+          transform: rotate(45deg)
+        &:before
+          transform: translateY(8px) rotate(-45deg)
+          border-color: transparent
+    .navbar-toggler-icon
+      width: 24px
+      height: 17px
+      background-image: none
+      position: relative
+      border-bottom: 2px solid black
+      transition: all 300ms linear
+      &:after, &:before
+        width: 24px
+        position: absolute
+        height: 2px
+        background-color: black
+        top: 0
+        left: 0
+        content: ''
+        z-index: 2
+        transition: all 300ms linear
+      &:after
+        top: 8px
+  .nav-link
+    transition: all 200ms linear
+//NAVIGATION HEADER SIDEBAR IN RESPONSIVE

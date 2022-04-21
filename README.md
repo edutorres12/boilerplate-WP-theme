@@ -1,1 +1,1 @@
-# gpboilerplate
+# boilerplate-wordpress
