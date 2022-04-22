@@ -42,3 +42,40 @@
   .nav-link
     transition: all 200ms linear
 //NAVIGATION HEADER SIDEBAR IN RESPONSIVE
+#menu-navbar
+  #nav-mobile-menu
+    .off-view
+      position: fixed
+      background: rgba(0,0,0,0.6)
+      z-index: 100
+      min-width: 998vw
+      top: 0
+      left: 0
+      min-height: 100vh
+      transition-duration: 500ms
+    .menu
+      padding: 1rem
+      transform: translateX(1px)
+      min-width: 10vw
+      width: 20em
+      max-width: calc(100vw + 1px)
+      position: fixed
+      z-index: 10000
+      background: white
+      min-height: 100vh
+      top: 0
+      right: 0
+      transition: 500ms ease-out
+    &.close
+      pointer-events: none
+      transition-delay: 500ms
+      .menu
+        transform: translateX( calc( 100vw + 20px))!important
+      .off-view
+        opacity: 0
+  .navbar-toggler
+    border: none
+    float: right
+    padding: 1px 3px 4px
+
+

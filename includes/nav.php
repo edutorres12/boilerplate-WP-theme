@@ -15,11 +15,11 @@ $current_page_id = url_to_postid($wp->request);
     <div class="row">
       <div class="col-12">
         <nav class="navbar navbar-expand-md navbar-light">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="<?php echo home_url(""); ?>">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu01" aria-controls="navbarMenu01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
+          <div class="collapse navbar-collapse" id="navbarMenu01">
             <!-- <ul class="navbar-nav ml-auto py-4 py-md-0">
               <li class="nav-item <?php if (is_page('blog')) : ?>active<?php endif; ?>">
                 <a class="nav-link" href="<?php echo home_url("blog"); ?>">Blog</a>
@@ -42,7 +42,52 @@ $current_page_id = url_to_postid($wp->request);
     </div>
   </div>
 </div>
+<!-- NAVIGATION HEADER 2 -->
+<div class="navigation-wrap bg-dark start-header start-style " id="menu-navbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <a href="<?php echo home_url(""); ?>" class="navbar-brand">Navbar</a>
+          <button class="navbar-toggler" type="button"  onclick="toggleNav()" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMenu02">
+            <!-- <ul class="navbar-nav ml-auto py-4 py-md-0">
+              <li class="nav-item <?php if (is_page('blog')) : ?>active<?php endif; ?>">
+                <a class="nav-link" href="<?php echo home_url("blog"); ?>">Blog</a>
+              </li>
+            </ul> -->
+            <?php wp_nav_menu(
+              array(
+                'container' => 'ul',
+                'menu_id' => 'header-menu',
+                'menu_class' => 'navbar-nav ml-auto py-4 py-md-0',
+                'list_item_class'  => 'nav-item',
+                'link_class'   => 'nav-link'
+              )
+            );
+            ?>
 
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-menu close d-md-none" id="nav-mobile-menu">
+    <div class="off-view" onclick="toggleNav()"></div>
+    <div class="menu">
+      <div class="w-100 text-end">
+        <button class="navbar-close-btn btn" onclick="toggleNav()" type="button" data-bs-toggle="collapse" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <ul class="navbar-nav ml-auto py-4 py-md-0"></ul>
+    </div>
+  </div>
+</div>
 <!-- NAVIGATION HEADER BOOSTRAP EXAMPLE -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
   <div class="container">
@@ -153,7 +198,7 @@ $current_page_id = url_to_postid($wp->request);
       </ul>
       <form class="d-flex ms-auto" action="<?php echo home_url(""); ?>">
         <div class="input-group">
-          
+
           <input class="form-control border-0 mr-2" type="search" placeholder="Search" name="s" aria-label="Search">
           <button class="btn btn-primary border-0" type="submit">Search</button>
         </div>
