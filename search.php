@@ -68,7 +68,14 @@ get_header();
 
     <div class="row">
       <div class="col lead text-center w-100">
-        <div class="d-inline-block"><?php picostrap_pagination() ?></div>
+
+        <?php
+        global $wp_query;
+
+
+        custom_pagination($wp_query);
+        ?>
+
       </div><!-- /col -->
     </div>
   </div>
