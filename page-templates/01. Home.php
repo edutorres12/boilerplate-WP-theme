@@ -8,9 +8,9 @@
             <div class="col-lg-12">
                 <h1>Home</h1>
                 <a class="btn global__button" data-bs-toggle="modal" data-bs-target="#videoModal" href="#videoModal" style="border-color: black;">Open Modal</a>
-
             </div>
         </div>
+    </div>
 </section>
 
 

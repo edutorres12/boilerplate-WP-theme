@@ -1,44 +1,33 @@
-<?php /* Template Name: 02. Blog */ ?>
+<?php
 
-<?php get_header(); ?>
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
-<section class="py-6 bg-light text-center">
-    <div class="container">
-        <h1><?php the_archive_title() ?></h1>
-        <div class="lead text-muted col-md-8 offset-md-2 archive-description"><?php echo category_description(); ?></div>
+get_header();
+?>
+<div class="py-6">
+    <div class="container text-center">
+        <h1 class="display-4"><?php the_title(); ?></h1>
+        <p class="lead">This is a modified py-6 that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
 
-        <!-- <p>
-      <a href="#" class="btn btn-primary my-2">Action</a>
-      <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-    </p> -->
-    </div>
-</section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 py-5">
+            <?php 
 
-<section class="album py-5">
-    <div class="container">
-        <div class="row">
-            <?php
-            if (have_posts()) :
-                while (have_posts()) : the_post();
-                    get_template_part('loops/cards');
+            if ( have_posts() ) : 
+                while ( have_posts() ) : the_post();
+                    the_content();
                 endwhile;
             else :
-                _e('Sorry, no posts matched your criteria.', 'textdomain');
+                _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
             endif;
             ?>
         </div>
-
-        <div class="row">
-            <div class="col lead text-center w-100">
-
-                <?php
-                global $wp_query;
-                custom_pagination($wp_query)
-                ?>
-
-            </div><!-- /col -->
-        </div> <!-- /row -->
     </div>
-</section>
+</div>
+
 
 <?php get_footer();

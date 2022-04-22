@@ -14,29 +14,8 @@ window.addEventListener('load', function() {
     }
 })
 
-
-//navbar
-var siteMenuClone = function() {
-    Items = document.querySelector("#navbarMenu02 ul").cloneNode(true)
-    console.log(Items)
-    document.querySelector("#nav-mobile-menu ul").innerHTML = Items.innerHTML
-};
-siteMenuClone();
-
-
-
-
-
-function toggleNav() {
-    movilMenu = document.querySelector("#nav-mobile-menu")
-    movilMenu.classList.toggle("close");
-}
-
 window.addEventListener('resize', function(event) {
-    if (window.innerWidth > 767) {
-        movilMenu = document.querySelector("#nav-mobile-menu")
-        movilMenu.classList.add("close");
-    }
+
 }, true);
 
 window.addEventListener('scroll', function() {

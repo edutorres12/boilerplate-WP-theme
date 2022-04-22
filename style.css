@@ -1,5 +1,5 @@
 /*!
- * Theme Name: gpboilerplate
+ * Theme Name: GP new Boilerplate Theme
  * Author: Eduardo Torres
  * Description: Boilerplate description
  * Version: 1.1 */
@@ -9812,53 +9812,6 @@ body {
   -webkit-transition: all 200ms linear;
   -o-transition: all 200ms linear;
   transition: all 200ms linear; }
-
-#menu-navbar #nav-mobile-menu .off-view {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-  min-width: 998vw;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  -webkit-transition-duration: 500ms;
-       -o-transition-duration: 500ms;
-          transition-duration: 500ms; }
-
-#menu-navbar #nav-mobile-menu .menu {
-  padding: 1rem;
-  -webkit-transform: translateX(1px);
-      -ms-transform: translateX(1px);
-          transform: translateX(1px);
-  min-width: 10vw;
-  width: 20em;
-  max-width: calc(100vw + 1px);
-  position: fixed;
-  z-index: 10000;
-  background: white;
-  min-height: 100vh;
-  top: 0;
-  right: 0;
-  -webkit-transition: 500ms ease-out;
-  -o-transition: 500ms ease-out;
-  transition: 500ms ease-out; }
-
-#menu-navbar #nav-mobile-menu.close {
-  pointer-events: none;
-  -webkit-transition-delay: 500ms;
-       -o-transition-delay: 500ms;
-          transition-delay: 500ms; }
-  #menu-navbar #nav-mobile-menu.close .menu {
-    -webkit-transform: translateX(calc( 100vw + 20px)) !important;
-        -ms-transform: translateX(calc( 100vw + 20px)) !important;
-            transform: translateX(calc( 100vw + 20px)) !important; }
-  #menu-navbar #nav-mobile-menu.close .off-view {
-    opacity: 0; }
-
-#menu-navbar .navbar-toggler {
-  border: none;
-  float: right;
-  padding: 1px 3px 4px; }
 
 .woocommerce {
   padding: 0px 0 80px; }
