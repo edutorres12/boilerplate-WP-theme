@@ -41,6 +41,9 @@ function add_theme_styles()
   wp_enqueue_style("glightbox-css",  get_template_directory_uri() . "/plugins/glightbox/dist/css/glightbox.css");
   wp_enqueue_style("style", get_stylesheet_uri());
   wp_enqueue_style('splide-styles', get_template_directory_uri() . "/plugins/splide-4.0.1/dist/css/splide.min.css");
+  wp_enqueue_style('boostrapStyles', "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css");
+  wp_enqueue_style('boostrapIcons', "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+  wp_enqueue_style('fontAwesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 }
 
 
@@ -55,7 +58,7 @@ function add_theme_scripts()
   );
   //Scripts
   wp_enqueue_script("modernizr", "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js", array(), "2.8.3", false);
-  wp_enqueue_script("bundlebootstrap", "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js", array(), "5.0.2", true);
+  wp_enqueue_script("bundlebootstrap", "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js", array(), "5.0.2", true);
   //wp_enqueue_script("gsap",  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js", array());
   //wp_enqueue_script("gsap-scroll",  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js", array());
   //wp_enqueue_script("splide", get_template_directory_uri() . "/plugins/splide-4.0.1/dist/js/splide.min.js", array());
@@ -67,15 +70,15 @@ function add_theme_scripts()
 add_action('wp_enqueue_scripts', 'add_theme_styles');
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
 //preload css
-add_action('wp_head', 'css_preload_load');
+//add_action('wp_head', 'css_preload_load');
 
 function css_preload_load()
 {
 ?>
-  <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+<!-- <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
   <link rel="dns-prefetch" href="https://kit.fontawesome.com">
-  <script defer async src="https://kit.fontawesome.com/887e8ccc36.js" data-auto-replace-svg="nest" crossorigin="anonymous"></script>
-<?php
+  <script defer async src="https://kit.fontawesome.com/.js" data-auto-replace-svg="nest" crossorigin="anonymous"></script>-->
+<?php 
 }
 
 function custom_pagination($wp_query, $class = 'pagination')

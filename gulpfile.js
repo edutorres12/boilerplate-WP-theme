@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const autoprefixer = require('gulp-autoprefixer');
@@ -21,7 +21,7 @@ gulp.task('sass', function() {
             'sass/style.sass'
         ])
         .pipe(sass({
-            outputStyle: 'uncompressed',
+            outputStyle: 'compressed',
         }))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 20 versions']
@@ -36,7 +36,7 @@ gulp.task('concat', function() {
             "js/home.js"
         ])
         .pipe(concat("main.js"))
-        //.pipe(terser())
+        .pipe(terser())
         .pipe(gulp.dest("js"))
         .pipe(browserSync.stream());
 });
